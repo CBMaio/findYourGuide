@@ -6,8 +6,9 @@
 
   .title {
     color: $salmon;
-    font-family: PoppinsSemibold;
+    font-family: Poppins;
     font-size: 20px;
+    font-weight: 600;
     margin: auto;
     text-align: center;
   }
@@ -25,8 +26,9 @@
       .label {
         color: $black;
         display: block;
-        font-family: PoppinsRegular;
+        font-family: Poppins;
         font-size: 15px;
+        font-weight: 400;
         margin-bottom: 8px;
       }
 
@@ -45,8 +47,9 @@
       border: none;
       border-radius: 30px;
       display: flex;
-      font-family: PoppinsSemibold;
+      font-family: Poppins;
       font-size: 16px;
+      font-weight: 600;
       height: 45px;
       justify-content: center;
       margin: auto;
@@ -60,6 +63,7 @@
   }
 
   .sign-up {
+    font-family: League Spartan;
     font-size: 13px;
     margin-top: 36px;
     text-align: center;
@@ -67,7 +71,9 @@
     .link {
       color: $terracotta;
       cursor: pointer;
-      font-family: LeagueSpartan-Light;
+      font-weight: 300;
     }
   }
 }
+
+
