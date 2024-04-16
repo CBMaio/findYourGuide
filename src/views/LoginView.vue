@@ -4,10 +4,9 @@ import BackArrow from '@/assets/svg/back-arrow.svg'
 
 const router = useRouter()
 
-const goToLoginView = function () {
-  router.push({ name: 'login' })
+const goToRegisterView = function () {
+  router.push({ name: 'register' })
 }
-
 const goToStartedScreen = function () {
   router.replace({ name: 'start' })
 }
@@ -16,35 +15,31 @@ const goToStartedScreen = function () {
 <template>
   <header class="header">
     <BackArrow class="icon" @click="goToStartedScreen" />
-    <div class="title">Crear una cuenta</div>
+    <div class="title">Iniciar Sesión</div>
   </header>
   <main class="main">
+    <div class="welcome-text">
+      <div class="title">Bienvenido</div>
+      <div class="subtitle">Por favor ingrese sus datos</div>
+    </div>
     <form action="" class="form">
-      <div class="input-container">
-        <label class="label" for="">Nombre completo </label>
-        <input class="input" type="text" placeholder="Nombre y Apellido" />
-      </div>
       <div class="input-container">
         <label class="label" for=""> Email </label>
         <input class="input" type="text" placeholder="example@example.com" />
       </div>
       <div class="input-container">
-        <label class="label" for="">Numero</label>
-        <input class="input" type="text" placeholder="123456789" />
-      </div>
-      <div class="input-container">
-        <label class="label" for="">Contraseña</label>
+        <label class="label" for=""> Email </label>
         <input class="input" type="password" placeholder="******" />
       </div>
-      <button class="button dark">Registrarse</button>
+      <button class="button dark">Ingresar</button>
       <div class="sign-up">
-        Ya tienes una cuenta?
-        <span class="link" @click="goToLoginView">Inicia sesión</span>
+        No tienes una cuenta?
+        <span class="link" @click="goToRegisterView"> Registrate </span>
       </div>
     </form>
   </main>
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/css/views/_registerView.scss';
+@import '@/assets/css/views/_loginView.scss';
 </style>
