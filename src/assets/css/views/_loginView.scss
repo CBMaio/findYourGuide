@@ -1,91 +1,11 @@
-.header {
+.main-container {
   align-items: center;
   display: flex;
-  height: 56px;
-  padding: 0px 24px;
+  height: 100%;
+  justify-content: center;
 
-  .title {
-    color: $salmon;
-    font-family: Poppins;
-    font-size: 20px;
-    font-weight: 600;
-    margin: auto;
-    text-align: center;
-  }
-}
-
-.main {
-  padding: 0px 24px;
-
-  .title {
-    color: $black;
-    font-family: Poppins;
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 24px;
-  }
-
-  .subtitle {
-    font-family: League Spartan;
-    font-size: 16px;
-    font-weight: 400;
-  }
-
-  .form {
-    margin-top: 48px;
-
-    .input-container {
-      margin-bottom: 16px;
-
-      .label {
-        color: $black;
-        display: block;
-        font-family: Poppins;
-        font-size: 16px;
-        font-weight: 400;
-        margin-bottom: 8px;
-      }
-
-      .input {
-        background-color: $beige; 
-        border: none;
-        border-radius: 18px;
-        height: 36px;
-        padding: 0px 16px;
-        width: 100%;
-      }
-    }
-
-    .button {
-      align-items: center;
-      border: none;
-      border-radius: 30px;
-      display: flex;
-      font-family: Poppins;
-      font-size: 16px;
-      font-weight: 600;
-      height: 45px;
-      justify-content: center;
-      margin: auto;
-      margin-top: 24px;
-      width: 207px;
-      &.dark {
-        background-color: $salmon;
-        color: $terracotta;
-      }
-    }
-  }
-
-  .sign-up {
-    font-family: League Spartan;
-    font-size: 13px;
-    margin-top: 36px;
-    text-align: center;
-    
-    .link {
-      color: $terracotta;
-      cursor: pointer;
-      font-weight: 300;
-    }
+  .form-container {
+    max-width: 600px;
+    width: 90%;
   }
 }

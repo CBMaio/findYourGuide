@@ -1,8 +1,8 @@
 export const routes = [
   {
     path: '/',
-    name: 'start',
-    component: () => import('@/views/GetStartedView.vue')
+    name: 'home',
+    component: () => import('@/views/HomeView.vue')
   },
   {
     path: '/login',
@@ -10,8 +10,13 @@ export const routes = [
     component: () => import('@/views/LoginView.vue')
   },
   {
-    path: '/register',
-    name: 'register',
-    component: () => import('@/views/RegisterView.vue')
+    path: '/profile',
+    name: 'profileSettings',
+    component: () => import('@/views/ProfileSettingsView.vue')
+  },
+  {
+    path: '/guide',
+    name: 'guide',
+    component: () => import('@/views/GuideProfileView.vue')
   }
 ]
