@@ -1,21 +1,10 @@
-Tailwind UI Introducing Catalyst A modern application UI kit for React Search components Open
-navigation Form Layouts Application UI Forms Stacked Preview Code Vue
+<script setup>
+import NavBar from '@/components/structure/NavBar.vue'
+import { PhotoIcon, UserCircleIcon } from '@heroicons/vue/24/solid'
+</script>
 
-<!--
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
--->
 <template>
+  <NavBar />
   <div class="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
     <div class="mx-auto max-w-2xl">
       <form>
@@ -369,7 +358,3 @@ navigation Form Layouts Application UI Forms Stacked Preview Code Vue
     </div>
   </div>
 </template>
-
-<script setup>
-import { PhotoIcon, UserCircleIcon } from '@heroicons/vue/24/solid'
-</script>

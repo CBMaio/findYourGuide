@@ -1,88 +1,22 @@
+<script setup>
+import { useRouter } from 'vue-router'
+import NavBar from '@/components/structure/NavBar.vue'
+
+const router = useRouter()
+
+const goToDestinations = function () {
+  router.push({ name: 'destinations' })
+}
+</script>
+
 <template>
-  <!-- component -->
-  <nav
-    class="bg-white border border-gray-200 dark:border-gray-700 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 shadow"
-  >
-    <div class="container flex flex-wrap justify-between items-center mx-auto">
-      <a href="/" class="flex items-center">
-        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-          Website
-        </span>
-      </a>
-
-      <div class="flex items-center">
-        <button
-          id="menu-toggle"
-          type="button"
-          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
-        >
-          <span class="sr-only">Open main menu</span>
-          <!-- Hamburger icon -->
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <div class="w-full md:block md:w-auto hidden" id="mobile-menu">
-        <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-          <li>
-            <a
-              href="#"
-              class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-              aria-current="page"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-            >
-              Services
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-            >
-              Pricing
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+  <NavBar />
   <div>
     <div
       class="w-screen h-screen overflow-hidden relative before:block before:absolute before:bg-black before:h-full before:w-full before:top-0 before:left-0 before:z-10 before:opacity-30"
     >
       <img
-        src="https://picsum.photos/seed/picsum/1900/850"
+        src="@/assets/svg/home-backgorund.jpg"
         class="absolute top-0 left-0 min-h-full ob"
         alt=""
       />
@@ -90,14 +24,15 @@
         <div class="col-span-6">
           <span class="uppercase text-white text-xs font-bold mb-2 block">WE ARE EXPERTS</span>
           <h1 class="text-white font-extrabold text-5xl mb-8">
-            Finpoint provides Financial Consulting in different ways
+            Explora con Expertos: Tours y Guías Turísticos
           </h1>
           <p class="text-stone-100 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            Descubre el mundo a través de nuestros ojos: Tours y guías turísticos para vivir
+            experiencias inolvidables."
           </p>
           <button
-            class="mt-8 text-white uppercase py-4 text-base font-light px-10 border border-white hover:bg-white hover:bg-opacity-10"
+            @click="goToDestinations"
+            class="mt-8 uppercase py-4 text-base font-light px-10 border border-white bg-white"
           >
             Buscar destinos
           </button>
